@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script src="ajax.js"></script>
+    <link rel="stylesheet" href="indexcss.css">
+</head>
+
+<body>
+
+    <h1>Tabla</h1>
+    <table id="tablaEstudiantes">
+        <thead>
+            <tr>
+                <th>Cedula</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="principal">
+        <div id="container">
+            <h1>Agregar Estudiante</h1>
+
+            <label for="a_cedula">Cedula:</label>
+            <input type="text" id="a_cedula" name="a_cedula">
+
+            <label for="a_nombre">Nombre:</label>
+            <input type="text" id="a_nombre" name="a_nombre">
+
+            <label for="a_apellido">Apellido:</label>
+            <input type="text" id="a_apellido" name="a_apellido">
+
+            <label for="a_direccion">Direccion:</label>
+            <input type="text" id="a_direccion" name="a_direccion">
+
+            <label for="a_telefono">Telefono:</label>
+            <input type="text" id="a_telefono" name="a_telefono">
+
+            <button id="Agregar">Agregar</button>
+        </div>
+        <div id="container">
+            <h1>Editar Estudiante</h1>
+
+            <label for="e_cedula">Cedula:</label>
+            <input type="text" id="e_cedula" name="e_cedula">
+
+            <label for="e_nombre">Nombre:</label>
+            <input type="text" id="e_nombre" name="e_nombre">
+
+            <label for="e_apellido">Apellido:</label>
+            <input type="text" id="e_apellido" name="e_apellido">
+
+            <label for="e_direccion">Direccion:</label>
+            <input type="text" id="e_direccion" name="e_direccion">
+
+            <label for="e_telefono">Telefono:</label>
+            <input type="text" id="e_telefono" name="e_telefono">
+
+            <button id="Editar">Editar</button>
+        </div>
+
+        <div id="container">
+            <h1>Eliminar Estudiante</h1>
+
+            <label for="el_cedula">Cedula:</label>
+            <input type="text" id="el_cedula" name="el_cedula">
+
+            <button id="Eliminar">Eliminar</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
