@@ -1,0 +1,241 @@
+\documentclass[12pt, oneside]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[titles]{tocloft}
+\usepackage{chngcntr}
+\usepackage{geometry}
+\geometry{a4paper, left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=ieee,sortcites=true,uniquename=init,giveninits=true]{biblatex}
+\addbibresource{library.bib}
+
+
+% Numeración continua de tablas y figuras (sin depender de secciones)
+\counterwithout{table}{section}
+\counterwithout{figure}{section}
+
+% Configuración para anexos
+\usepackage[title,titletoc]{appendix}
+\renewcommand{\appendixname}{Anexo}
+\renewcommand{\appendixtocname}{Índice de anexos}
+\renewcommand{\appendixpagename}{Índice de anexos}
+
+% Comando personalizado para anexos
+\newcommand{\anexo}[1]{%
+  \refstepcounter{section}%
+  \section*{Anexo \Alph{section}: #1}%
+  \addcontentsline{toc}{section}{Anexo \Alph{section}: #1}%
+}
+
+% Configuración de hipervínculos (todo en negro)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Propuesta de Trabajo de Titulación},
+    pdfauthor={Autor},
+    pdfsubject={Trabajo de Titulación},
+    pdfkeywords={investigación, proyecto, titulación}
+}
+
+% Formato de secciones
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Configuración de índices
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cfttableader}{\cftdotfill{\cftdotsep}}
+
+% Estilo para tablas
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\begin{document}
+
+% Portada
+\begin{titlepage}
+    \centering
+    
+    % Encabezado con logos y universidad
+    \begin{minipage}{0.1\textwidth}
+        \includegraphics[width=\linewidth]{picture/logo1.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.55\textwidth}
+        \centering
+        {\small \textbf{UNIVERSIDAD TÉCNICA DE AMBATO}} \\
+        \vspace{0.18cm}
+        {\normalsize \textbf{FACULTAD DE INGENIERÍA EN SISTEMAS,}} \\
+        {\normalsize \textbf{ELECTRÓNICA E INDUSTRIAL}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.18\textwidth}
+        \includegraphics[width=\linewidth]{picture/logo2.png}
+    \end{minipage}
+    
+    \vspace{2cm}
+    
+    % Contenido de las secciones
+    \raggedright
+    \textbf{MODALIDAD:} \\
+    \begin{center}Trabajo de Titulación\end{center}
+    
+    \vspace{0.8cm}
+    \textbf{OPCIÓN DE TITULACIÓN:} \\
+    \begin{center}Proyecto de Investigación\end{center}
+    
+    \vspace{0.8cm}
+    \textbf{AUTOR:} \\
+    \begin{center}Paredes Rivera, Kenneth Raúl\end{center}
+    
+    \vspace{0.8cm}
+    \textbf{CARRERA:} \\
+    \begin{center}Ingeniería en Software\end{center}
+    
+    \vspace{0.8cm}
+    \textbf{ÁREA:} \\
+    \begin{center}Tecnologías de la Información\end{center}
+    
+    \vspace{0.8cm}
+    \textbf{LÍNEA DE INVESTIGACIÓN:} \\
+    \begin{center}Desarrollo de Software\end{center}
+    
+    \vspace{0.8cm}
+    \textbf{PERÍODO:} \\
+    \begin{center}Agosto 2026 -- Enero 2026\end{center}
+    
+    \vspace{0.8cm}
+    \textbf{LUGAR Y FECHA DE PRESENTACIÓN:} \\
+    \begin{center}Ambato, 07 de septiembre de 2025\end{center}
+    
+    \vfill
+\end{titlepage}
+
+
+
+% Índice de contenidos
+\tableofcontents
+\newpage
+
+% Índice de tablas
+\listoftables
+\newpage
+
+% Índice de figuras
+\listoffigures
+\newpage
+
+% Índice de anexos
+\appendixpage
+\addappheadtotoc
+\newpage
+
+% Contenido principal
+\section{Tema de investigación}
+``TEMA''
+
+El déficit de trazabilidad en las terapias fonológicas compromete la evolución del lenguaje en la niñez.
+
+\subsection{Planteamiento del problema}
+En el ámbito contemporáneo de la intervención logopédica, la evidencia muestra que los entornos digitales y las terapias mediadas por software pueden incidir significativamente en predictores tempranos de la alfabetización, como la conciencia fonológica y la discriminación de fonemas, cuando se diseñan con rigor experimental y principios instruccionales basados en la atención y la motivación \parencite{Bertoni2024,Vonthron2024,Zhou2025}. Ensayos recientes con juegos serios y protocolos digitales han reportado mejoras sostenidas en memoria fonológica y \textit{rapid automatized naming}, así como retención de progresos en prelectores en riesgo \parencite{Bertoni2024,Gijbels2024}. En este horizonte, la convergencia entre gamificación terapéutica y evaluación automatizada se perfila como un recurso fértil para la rehabilitación del habla infantil \parencite{Kim2023,Glatz2023}.
+
+Desde la perspectiva organizacional, la orquestación de terapias y la trazabilidad de resultados requieren infraestructuras interoperables que integren evaluación, planificación terapéutica y desempeño en tiempo real \parencite{ONC2024HTI1,ONC2024SB}. La literatura reciente subraya que la adopción eficaz de estas herramientas por parte de los profesionales depende de su usabilidad, transparencia y capacidad para reducir la carga administrativa, garantizando al mismo tiempo la alineación con estándares de intercambio de información clínica \parencite{Leinweber2023,Gijbels2024}. La falta de tales mecanismos perpetúa procesos fragmentados, restringiendo la eficacia y la sistematicidad del trabajo terapéutico.
+
+En este marco, el proyecto \textit{PICOFON} contempla la “\textit{Prescriber App}” como núcleo de gestión clínica y pedagógica, orientada a parametrizar terapias, generar ejercicios a partir de inventarios fonológicos y consolidar analíticas longitudinales \parencite{Kim2023,Vonthron2024}. La integración entre motor de ejercicios gamificados, evaluación continua y paneles de seguimiento ha demostrado favorecer la motivación, la adherencia y la precisión articulatoria, configurando así un escenario idóneo para potenciar tanto el desempeño infantil como la praxis profesional \parencite{Bertoni2024,Zhou2025}.
+
+¿De qué manera la ausencia de un seguimiento clínico sistemático mediante plataformas digitales incide en la eficacia y trazabilidad de las terapias fonológicas infantiles?
+
+\section{Justificación}
+
+El diseño y la ejecución de terapias fonológicas infantiles se hallan constreñidos por una débil infraestructura digital que dificulta la supervisión clínica constante y basada en evidencias. Estudios empíricos recientes ponen de manifiesto que la aceptación y el uso de tecnologías por parte de los profesionales constituye un factor determinante para la participación digital del paciente: en un muestreo nacional alemán de 707 terapeutas, el modelo modificado UTAUT explicaba el 58.8\% de la variabilidad en la intención de uso de medios digitales, señalando que factores organizacionales y de competencia digital determinan la adopción real de modalidades como la videoterapia y las aplicaciones clínicas \parencite{Leinweber2023}. Esta permeabilidad parcial a la tecnología origina que la actividad clínica continúe apoyándose en registros manuales y en procedimientos no sistematizados, lo que erosiona la trazabilidad terapéutica y la posibilidad de intervención adaptativa documentada.
+
+La cuantificación de barreras confirma la magnitud del problema: una revisión de alcance que sintetizó 56 publicaciones y 10 245 profesionales identificó ocho categorías principales de obstáculos —tecnología, práctica, normativa, entorno, competencia, entre otras—; las limitaciones más citadas fueron la falta de experiencia práctica, infraestructura inestable y déficits formativos en competencias digitales \parencite{Rettinger2023}. En paralelo, un mapeo sistemático sobre telepráctica en logopedia incluyó 32 estudios empíricos que registraron un crecimiento notable de intervenciones remotas tras la pandemia, pero subrayaron carencias en la documentación estandarizada del progreso entre sesiones y en los instrumentos para la retroalimentación automatizada \parencite{Guglani2023}. La convergencia de estas evidencias sugiere que la disponibilidad puntual de tecnologías no se traduce automáticamente en seguimiento clínico sistemático y reproducible.
+
+La dimensión clínica y social de esta carencia resulta explícita cuando se considera la práctica contemporánea de adopción de tecnologías asistidas: estudios cualitativos con profesionales que han incorporado herramientas avanzadas (p. ej. biofeedback por ultrasonido) describen que los determinantes organizacionales y la percepción de carga (``effort expectancy'') condicionan la continuidad de uso en contexto clínico, lo que a menudo impide que las mejoras instrumentales repercutan en un seguimiento sostenido del paciente \parencite{Dugan2023}. En el terreno del discurso técnico, la literatura especializada en inteligencia aplicada al habla advierte además que la capacidad de traducir medidas automáticas en decisiones clínicas exige conjuntos de datos clínicos rigurosos y una supervisión profesional constante para garantizar validez, interpretabilidad y seguridad algorítmica \parencite{Berisha2024}. La ausencia de esta supervisión estructurada incrementa el riesgo de que los avances tecnológicos queden subutilizados o mal aplicados, con impacto negativo en la eficacia terapéutica.
+
+Evidencias experimentales recientes ofrecen contraste: intervenciones digitales (p. ej. juegos serios y aplicaciones domiciliares) han mostrado viabilidad y efectos favorables en parámetros de articulación y motivación, pero los ensayos reportan con frecuencia la falta de paneles clínicos o dashboards que permitan a los terapeutas monitorizar adherencia, rendimiento entre sesiones y adaptar la progresión de ejercicios sobre la base de métricas objetivas \parencite{Kim2023,Gijbels2024}. Por consiguiente, la escasa instrumentación del seguimiento clínico no sólo compromete la interpretabilidad de los datos generados por los pacientes, sino que además limita la replicabilidad metodológica y la acumulación de evidencia sobre qué prácticas facilitan cambios sostenibles en la articulación infantil.
+
+Desde una perspectiva de salud pública y equidad, la falta de supervisión tecnológica homogénea se asocia a desigualdades en la atención: los estudios incluidos en revisiones muestran brechas formativas y de acceso entre contextos urbanos y rurales y entre regiones con distinto nivel de recursos, circunstancia que condiciona la posibilidad de escalar prácticas de seguimiento remoto validadas \parencite{Rettinger2023,Guglani2023}. La evidencia empírica indica que, cuando existen funcionalidades de retroalimentación en tiempo real y paneles de seguimiento clínico, la retención del usuario y la adherencia terapéutica tienden a aumentar; sin embargo, esas funcionalidades permanecen infraimplementadas en la mayor parte de las experiencias documentadas \parencite{Rettinger2023,Kim2023}.
+
+El interés investigativo en esta línea se legitima por su doble valor: a nivel teórico permite articular marcos de evaluación fonológica con metodologías de analítica clínica; a nivel práctico, posibilita delinear criterios de trazabilidad que transformen datos en decisiones terapéuticas reproducibles. Las publicaciones recientes señalan que, para que la adopción tecnológica revierta en mejora clínica sostenida, resulta imprescindible garantizar competencia digital profesional, infraestructura estable y mecanismos normativos de interoperabilidad que faciliten el intercambio de datos clínicos con garantías de seguridad y calidad \parencite{Leinweber2023,ONC2024HTI1}.
+
+La atención de esta problemática con rigor empírico promete beneficios articulados: consolidación de prácticas clínicas replicables, aumento de la adherencia y motivación infantil, mejora en la detección temprana de estancamientos terapéuticos y mayor equidad en el acceso a intervenciones efectivas. Tales beneficios no son especulativos, sino que emergen de la confluencia de la evidencia citada: la literatura documenta tanto la existencia de tecnologías con efecto clínico potencial como la ausencia concomitante de mecanismos de seguimiento y gobernanza de datos que permitan capitalizar dichos efectos en la práctica cotidiana \parencite{Gijbels2024,Berisha2024,Kim2023}.
+
+
+\section{Objetivo general}
+
+Objetivo
+
+\subsection{Objetivos específicos}
+
+\section{Marco teórico}
+
+\section{Metodología}
+
+\subsection{Recolección de información}
+Se aplicarán:
+\begin{itemize}
+    \item Encuestas a estudiantes y docentes
+    \item Entrevistas con personal administrativo
+    \item Observación directa de procesos
+\end{itemize}
+
+\subsection{Procesamiento y análisis de datos}
+Los datos se analizarán utilizando:
+\begin{itemize}
+    \item Análisis estadístico con SPSS
+    \item Pruebas de hipótesis
+    \item Análisis correlacional
+\end{itemize}
+
+\subsection{Propuesta de solución}
+
+
+\subsection{Desarrollo del proyecto}
+
+\section{Recursos}
+\subsection*{Recursos humanos}
+\begin{itemize}
+    \item 1 Investigador principal
+    \item 2 Desarrolladores
+    \item 1 Diseñador UX/UI
+\end{itemize}
+
+\subsection*{Recursos tecnológicos}
+\begin{itemize}
+    \item Servidores cloud
+    \item Licencias de software
+    \item Equipos de desarrollo
+\end{itemize}
+
+\section{Cronograma}
+
+
+\section{Bibliografía}
+
+\printbibliography
+
+\section{Anexos}
+\begin{appendices}
+\anexo{Anexo Prueba}
+Aqui van los anexos
+
+\end{appendices}
+
+\end{document}
